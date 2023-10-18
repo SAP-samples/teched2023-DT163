@@ -4,7 +4,7 @@
 
 ## Description
 
-This repository contains the material for the SAP TechEd 2023 session called Session ID DT163 - Achieve Dynamic Data Access with ABAC Policies with UI Data Protection.
+This repository contains the material for the SAP TechEd 2023 session called Session ID DT163 - Achieve Dynamic Data Access with ABAC Policies.
 
 ## Overview
 
