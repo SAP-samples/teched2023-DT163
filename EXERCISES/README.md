@@ -30,6 +30,7 @@
   ### B. Configuration steps [24](#configuration-steps)
   ### C. Test: protected business scenario [33](#test-protected-business-scenario-1)
 <br/>
+
 ## 5. Part 3: Policy based data blocking scenario [35](#part-3-policy-based-data-blocking-scenario)
   ### A. Overview and business scenario [35](#overview-and-business-scenario-3)
   ### B. Configuration steps [35](#configuration-steps-1)
