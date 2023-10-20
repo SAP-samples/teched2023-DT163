@@ -231,7 +231,7 @@ Field|Data Element|Table Name|Field Name|Program Name|Screen Number|Screen Field
 |Material [Number] |MATNR|RMMG1|MATNR|SAPLMGD1|1002|RMMG1-MATNR|
 |Material Group|MATKL|MARA|MATKL|SAPLMGD1|2001|MARA-MATKL|
 |Gross Weight|BRGEW|MARA|BRGEW|SAPLMGD1|2007|MARA-BRGEW|
-|Net Weight|NTGEW|MARA|NTGEW||SAPLMGD1|2007|MARA-NTGEW|
+|Net Weight|NTGEW|MARA|NTGEW|SAPLMGD1|2007|MARA-NTGEW|
 
 That’s it for preparations… let’s get started with the configuration!
 
