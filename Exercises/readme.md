@@ -1,12 +1,14 @@
 
 <img src="media/image1.png" style="width:6.26806in;height:3.52569in" />
+
 Exercise: Working with SAP UI Data Protection
 
 SAP TechEd Version 2023-11
 
 
+<details>
+<summary>**<u>Table of Contents</u>**</summary>
 
-<u>Table of Contents</u>
 **1. Table of Contents [2](#_Toc148094853)**
 
 **2. Introduction and Overview [3](#introduction-and-overview)**
@@ -63,17 +65,18 @@ C. Test of protected business scenario [36](#test-of-protected-business-scenario
 
 A. Test: protected business scenario [39](#test-protected-business-scenario-2)
 
-<u>Introduction and Overview</u>
-Overview and business scenario
+<details>
+<summary><u>Introduction and Overview</u></summary>
+
+**Overview and business scenario**
+
 Welcome the UI Data Protection workshop at SAPInsider!
 
 UI Data Protection Masking is part of the UI Data Protection Suite, which is comprised of: 
+- UI Data Protection Masking 
+- UI Protection Logging 
 
-UI Data Protection Masking 
-UI Protection Logging 
 
-<details>
-<summary>Introduction</summary>
 
 In the next 2 hours, you will gain an understanding of the workings of the SAP UI data protection solutions and quickly go through the steps for configuring 3 types of masking scenarios based on real life use cases in the materials management area:
 
@@ -206,10 +209,11 @@ Select “user specified system” and press “Next”. In the following screen
 <img src="media/image14.png" style="width:4.50423in;height:4.73529in" />
 To conduct the configurations and business scenarios, you will be using the following users and credentials. Please note that in an actual productive scenario, there should be more roles – for simplicity, we have modeled Peter Munroe, the administrator, as a super user responsible for technical and business configurations, but also with access to business information and processes.
 
-User	Password	Name	Type
-BCOLLINS	Welcome1	Ben Collins	Level 1 Clearance
-SMORGAN	Welcome1	Scott Morgan	Level 2 Clearance
-AMYERS	Welcome1	Aubrey Myers	Level 3 Clearance
+| User| Password| Name| Type |
+|--------:|----------:|--------------:|------------------:|
+| BCOLLINS| Welcome1| Ben Collins| Level 1 Clearance|
+|SMORGAN | Welcome1| Scott Morgan| Level 2 Clearance|
+|AMYERS|Welcome1|Aubrey Myers|Level 3 Clearance|
 BPINST	Welcome1	Peter Munroe	Administrator & Config user
 <img src="media/image15.png" style="width:5.41389in;height:3.38472in" />
 Training data for the DeltaSpeed Alpha Bill of Materials structure and all relevant material numbers (Bill of materials/BOM with header material and components:
