@@ -7,9 +7,9 @@ SAP TechEd Version 2023-11
 
 
 <u>Table of Contents</u>
-1. Table of Contents [2](#_Toc148094853)
+**1. Table of Contents [2](#_Toc148094853)**
 
-2. Introduction and Overview [3](#introduction-and-overview)
+**2. Introduction and Overview [3](#introduction-and-overview)**
 
 A. Overview and business scenario [3](#overview-and-business-scenario)
 
@@ -17,19 +17,19 @@ B. Introduction to UIDP Masking [3](#introduction-to-uidp-masking)
 
 C. Quick live product demo [4](#quick-live-product-demo)
 
-3. Training: Time to get busy! [7](#training-time-to-get-busy)
+**3. Training: Time to get busy! [7](#training-time-to-get-busy)**
 
 A. Overview UIDP Masking Configuration [7](#overview-uidp-masking-configuration)
 
 B. Logon to demo/hands-on systems [7](#logon-to-demohands-on-systems)
 
-4. Optional warm-up: UI Data Protection Logging [11](#optional-warm-up-ui-data-protection-logging)
+**4. Optional warm-up: UI Data Protection Logging [11](#optional-warm-up-ui-data-protection-logging)**
 
 A. Introduction: what is UI Data Protection Logging? [12](#introduction-what-is-ui-data-protection-logging)
 
 B. Setup/Configuration steps (“minimal viable” scenario) [12](#setupconfiguration-steps-minimal-viable-scenario)
 
-5. Part 1: role based masking of fields [15](#part-1-role-based-masking-of-fields)
+**5. Part 1: role based masking of fields [15](#part-1-role-based-masking-of-fields)**
 
 A. Overview and business scenario [15](#overview-and-business-scenario-1)
 
@@ -41,7 +41,7 @@ D. Configuration steps – role based with Reveal on Demand [22](#configuration-
 
 E. Test: protected business scenario [23](#test-protected-business-scenario)
 
-6. Part 2: policy based masking of fields [24](#part-2-policy-based-masking-of-fields)
+**6. Part 2: policy based masking of fields [24](#part-2-policy-based-masking-of-fields)**
 
 A. Overview and business scenario [24](#overview-and-business-scenario-2)
 
@@ -57,9 +57,9 @@ B. Configuration steps [35](#configuration-steps-1)
 
 C. Test of protected business scenario [36](#test-of-protected-business-scenario)
 
-8. Bonus part: Multi level approach based on derived attributes in SAP GUI [39](#bonus-part-multi-level-approach-based-on-derived-attributes-in-sap-gui)
+**8. Bonus part: Multi level approach based on derived attributes in SAP GUI [39](#bonus-part-multi-level-approach-based-on-derived-attributes-in-sap-gui)**
 
-9. Reprise: Bonus Part UI Data Protection Logging [39](#reprise-bonus-part-ui-data-protection-logging)
+**9. Reprise: Bonus Part UI Data Protection Logging [39](#reprise-bonus-part-ui-data-protection-logging)**
 
 A. Test: protected business scenario [39](#test-protected-business-scenario-2)
 
@@ -69,9 +69,11 @@ Welcome the UI Data Protection workshop at SAPInsider!
 
 UI Data Protection Masking is part of the UI Data Protection Suite, which is comprised of: 
 
-UI Masking 
+UI Data Protection Masking 
+UI Protection Logging 
 
-UI Logging 
+<details>
+<summary>Introduction</summary>
 
 In the next 2 hours, you will gain an understanding of the workings of the SAP UI data protection solutions and quickly go through the steps for configuring 3 types of masking scenarios based on real life use cases in the materials management area:
 
@@ -87,7 +89,13 @@ This demo scenario guide is focused on the UI Masking solution. If you are inter
 
 We wish you an interesting session. We look forward to your feedback on the usefulness of the training both from context as well as usability perspective!
 
-Introduction to UIDP Masking
+</details>
+
+
+<details>
+<summary>Introduction to UIDP Masking</summary>
+
+
 New legislation worldwide makes companies responsible for controlling who can access, view, and modify sensitive data internally; both for tracking access as well as further securing sensitive data. This requires a flexible, granular way to limit access to critical fields to authorized users. 
 
 To this end, the standard SAP roles & authorizations concept alone may not be sufficient to fulfil the customer’s requirements, prompting a field-centric data protection solution – which SAP offers as an add-on software solution called UI Data Protection Masking (or UI Masking for short). 
@@ -170,7 +178,11 @@ This flow intentionally excludes the Level 1 user (BCOLLINS) as this user’s ro
 
 <img src="media/image7.png" style="width:6.26806in;height:2.80486in" />
 <u>Training: Time to get busy!</u>
-Overview UIDP Masking Configuration
+
+</details>
+<details>
+<summary>Overview UIDP Masking Configuration</summary>
+
 <img src="media/image8.png" style="width:6.26806in;height:2.27083in" />
 Logon to demo/hands-on systems
 The training scenarios are based in separate systems per user. Please identify IP address linked to your device/seat/ID. Best note it down separately for use in the next few steps.
@@ -183,7 +195,7 @@ Your browser may complain that this is not a secure connection. Please override 
 Bookmark the link, or create a hyperlink e.g. on the desktop, for further use during this training.
 
 Access to SAP GUI
-The actual business scenario you will be building are based in the SAP GUI interface, which you can access through the training computer’s installation of SAP Logon. Please start SAP Logon (a local installation accessible in Windows start menu, or the icon on the desktop:
+The actual business scenario you will be building is based in the SAP GUI interface, which you can access through the training computer’s installation of SAP Logon. Please start SAP Logon (a local installation accessible in Windows start menu, or the icon on the desktop:
 
 <img src="media/image10.png" style="width:0.31102in;height:0.15748in" />
 To logon, choose to create a new connection:
@@ -213,10 +225,16 @@ In the following screen, mark the information for data element, database table a
 <img src="media/image29.png" style="width:3.16535in;height:3.94094in" />
 Repeat for the other fields – or cross-check with the information maintained here:
 
+
+| Rank | Languages |
+|-----:|-----------|
+|     1| Javascript|
+|     2| Python    |
+|     3| SQL       |
 Field	Data Element	Table Name	Field Name	Program Name	Screen Number	Screen Field
-Descr	MAKTX	MAKT	MAKTX	SAPLMGD1	1002	MAKT-MAKTX
-Material [Number]	MATNR	RMMG1	MATNR	SAPLMGD1	1002	RMMG1-MATNR
-Material Group	MATKL	MARA	MATKL	SAPLMGD1	2001	MARA-MATKL
+Descr |	MAKTX	MAKT	MAKTX	SAPLMGD1	1002	MAKT-MAKTX
+Material [Number] |	MATNR	RMMG1	MATNR	SAPLMGD1	1002	RMMG1-MATNR
+Material Group | MATKL	MARA	MATKL	SAPLMGD1	2001	MARA-MATKL
 Gross Weight	BRGEW	MARA	BRGEW	SAPLMGD1	2007	MARA-BRGEW
 Net Weight	NTGEW	MARA	NTGEW	SAPLMGD1	2007	MARA-NTGEW
 That’s it for preparations… let’s get started with the configuration!
