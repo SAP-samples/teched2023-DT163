@@ -173,28 +173,35 @@ This flow intentionally excludes the Level 1 user (BCOLLINS) as this user’s ro
 The training scenarios are based in separate systems per user. Please identify IP address linked to your device/seat/ID. Best note it down separately for use in the next few steps.
 <br/>
 
-|	ID	|	SAP S/4H server address 	|	Fiori Launchpad link	|
-|	------	:|	---------------------	:|	--------------------------------------------------------	:|
-|	01	|	18.156.8.73	|	https://18.156.8.73:44301/sap/bc/ui2/flp#Shell-home	|
-|	02	|	3.65.57.232	|	https://3.65.57.232:44301/sap/bc/ui2/flp#Shell-home	|
-|	03	|	3.72.193.27	|	https://3.72.193.27:44301/sap/bc/ui2/flp#Shell-home	|
-|	04	|	3.67.30.80	|	https://3.67.30.80:44301/sap/bc/ui2/flp#Shell-home	|
-|	05	|	3.127.78.183	|	https://3.127.78.183:44301/sap/bc/ui2/flp#Shell-home	|
-|	B_01	|	18.196.109.250	|	https://18.196.109.250:44301/sap/bc/ui2/flp#Shell-home	|
-|	B_02	|	18.198.109.169	|	https://18.198.109.169:44301/sap/bc/ui2/flp#Shell-home	|
-|	B_03	|	18.197.196.106	|	https://18.197.196.106:44301/sap/bc/ui2/flp#Shell-home	|
-|	B_04	|	52.29.139.79	|	https://52.29.139.79:44301/sap/bc/ui2/flp#Shell-home	|
-|	B_05	|	18.195.17.184	|	https://18.195.17.184:44301/sap/bc/ui2/flp#Shell-home	|
-|	C_01	|	18.195.63.95	|	https://18.195.63.95:44301/sap/bc/ui2/flp#Shell-home	|
-|	C_02	|	3.65.5.164	|	https://3.65.5.164:44301/sap/bc/ui2/flp#Shell-home	|
-|	C_03	|	35.156.208.209	|	https://35.156.208.209:44301/sap/bc/ui2/flp#Shell-home	|
-|	C_04	|	52.28.84.129	|	https://52.28.84.129:44301/sap/bc/ui2/flp#Shell-home	|
-|	C_05	|	3.74.62.248	|	https://3.74.62.248:44301/sap/bc/ui2/flp#Shell-home	|
-|	D_01	|	52.59.35.77	|	https://52.59.35.77:44301/sap/bc/ui2/flp#Shell-home	|
-|	D_02	|	3.79.164.30	|	https://3.79.164.30:44301/sap/bc/ui2/flp#Shell-home	|
-|	D_03	|	52.29.112.142	|	https://52.29.112.142:44301/sap/bc/ui2/flp#Shell-home	|
-|	D_04	|	18.157.173.90	|	https://18.157.173.90:44301/sap/bc/ui2/flp#Shell-home	|
-|	D_05	|	3.77.170.238	|	https://3.77.170.238:44301/sap/bc/ui2/flp#Shell-home	|
+| ID| SAP S/4H server|Fiori Launchpad Link| 
+|--------:|----------:|--------------:|------------------:|
+|BCOLLINS| Welcome1| Ben Collins| Level 1 Clearance|
+|SMORGAN | Welcome1| Scott Morgan| Level 2 Clearance|
+|AMYERS|Welcome1|Aubrey Myers|Level 3 Clearance|
+|BPINST|Welcome1|Peter Munroe|Administrator & Config user|
+
+|ID|SAP S/4H server address|Fiori Launchpad link|
+|------:|---------------------:|--------------------------------------------------------:|
+|01|18.156.8.73|https://18.156.8.73:44301/sap/bc/ui2/flp#Shell-home	|
+|02|3.65.57.232|https://3.65.57.232:44301/sap/bc/ui2/flp#Shell-home	|
+|03|3.72.193.27|https://3.72.193.27:44301/sap/bc/ui2/flp#Shell-home	|
+|04|3.67.30.80|https://3.67.30.80:44301/sap/bc/ui2/flp#Shell-home	|
+|05|3.127.78.183|https://3.127.78.183:44301/sap/bc/ui2/flp#Shell-home	|
+|B_01|18.196.109.250|https://18.196.109.250:44301/sap/bc/ui2/flp#Shell-home	|
+|B_02|18.198.109.169|https://18.198.109.169:44301/sap/bc/ui2/flp#Shell-home	|
+|B_03|18.197.196.106|https://18.197.196.106:44301/sap/bc/ui2/flp#Shell-home	|
+|B_04|52.29.139.79|https://52.29.139.79:44301/sap/bc/ui2/flp#Shell-home	|
+|B_05|18.195.17.184|https://18.195.17.184:44301/sap/bc/ui2/flp#Shell-home	|
+|C_01|18.195.63.95|https://18.195.63.95:44301/sap/bc/ui2/flp#Shell-home	|
+|C_02|3.65.5.164|https://3.65.5.164:44301/sap/bc/ui2/flp#Shell-home	|
+|C_03|35.156.208.209|https://35.156.208.209:44301/sap/bc/ui2/flp#Shell-home	|
+|C_04|52.28.84.129|https://52.28.84.129:44301/sap/bc/ui2/flp#Shell-home	|
+|C_05|3.74.62.248|https://3.74.62.248:44301/sap/bc/ui2/flp#Shell-home	|
+|D_01|52.59.35.77|https://52.59.35.77:44301/sap/bc/ui2/flp#Shell-home	|
+|D_02|3.79.164.30|https://3.79.164.30:44301/sap/bc/ui2/flp#Shell-home	|
+|D_03|52.29.112.142|https://52.29.112.142:44301/sap/bc/ui2/flp#Shell-home	|
+|D_04|18.157.173.90|https://18.157.173.90:44301/sap/bc/ui2/flp#Shell-home	|
+|D_05|3.77.170.238|https://3.77.170.238:44301/sap/bc/ui2/flp#Shell-home	|
 
 <br/>
 
