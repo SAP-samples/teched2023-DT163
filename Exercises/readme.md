@@ -215,7 +215,8 @@ To conduct the configurations and business scenarios, you will be using the foll
 | BCOLLINS| Welcome1| Ben Collins| Level 1 Clearance|
 |SMORGAN | Welcome1| Scott Morgan| Level 2 Clearance|
 |AMYERS|Welcome1|Aubrey Myers|Level 3 Clearance|
-BPINST	Welcome1	Peter Munroe	Administrator & Config user
+|BPINST|Welcome1|Peter Munroe|Administrator & Config user|
+
 <img src="media/image15.png" style="width:5.41389in;height:3.38472in" />
 Training data for the DeltaSpeed Alpha Bill of Materials structure and all relevant material numbers (Bill of materials/BOM with header material and components:
 
