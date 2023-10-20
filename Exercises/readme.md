@@ -1,9 +1,9 @@
 
 <img src="media/image1.png" style="width:6.26806in;height:3.52569in" />
 
-Exercise: Working with SAP UI Data Protection
+**Exercise: Working with SAP UI Data Protection**
 
-SAP TechEd Version 2023-11
+**SAP TechEd Version 2023-11**
 
 
 <details>
