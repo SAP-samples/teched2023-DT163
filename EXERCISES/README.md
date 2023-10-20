@@ -1,61 +1,39 @@
 
 
 
-# Exercise: Working with SAP UI Data Protection**
+# Exercise: Working with SAP UI Data Protection
 
-## SAP TechEd Version 2023-11**
+## SAP TechEd Version 2023-11
 
 <img src="media/image1.png" style="width:6.26806in;height:3.52569in" />
 
-# Table of Contents
+# 1. Table of Contents
 
-# 1. Table of Contents [2](#_Toc148094853)**
-# 2. Introduction and Overview [3](#introduction-and-overview)**
-  ## A. Overview and business scenario [3](#overview-and-business-scenario)**
-  ## B. Introduction to UIDP Masking [3](#introduction-to-uidp-masking)**
-  ## C. Quick live product demo [4](#quick-live-product-demo)**
+## 1. Introduction and Overview [3](#introduction-and-overview)
+  ### A. Overview and business scenario [3](#overview-and-business-scenario)
+  ### B. Introduction to UIDP Masking [3](#introduction-to-uidp-masking)
+  ### C. Quick live product demo [4](#quick-live-product-demo)
 
+## 2. Training: Time to get busy! [7](#training-time-to-get-busy)
+  ### A. Overview UIDP Masking Configuration [7](#overview-uidp-masking-configuration)
+  ### B. Logon to demo/hands-on systems [7](#logon-to-demohands-on-systems)
 
+## 3. Part 1: role based masking of fields [15](#part-1-role-based-masking-of-fields)
+  ### A. Overview and business scenario [15](#overview-and-business-scenario-1)
+  ### B. Test: baseline/”vanilla” system behaviour [15](#test-baselinevanilla-system-behaviour)
+  ### C. Configuration steps – simple role based scenario [16](#configuration-steps-simple-role-based-scenario)
+  ### D. Configuration steps – role based with Reveal on Demand [22](#configuration-steps-role-based-with-reveal-on-demand)
+  ### E. Test: protected business scenario [23](#test-protected-business-scenario)
 
-**3. Training: Time to get busy! [7](#training-time-to-get-busy)**
+## 4. Part 2: policy based masking of fields [24](#part-2-policy-based-masking-of-fields)
+  ### A. Overview and business scenario [24](#overview-and-business-scenario-2)
+  ### B. Configuration steps [24](#configuration-steps)
+  ### C. Test: protected business scenario [33](#test-protected-business-scenario-1)
 
-  **A. Overview UIDP Masking Configuration [7](#overview-uidp-masking-configuration)**
-
-  **B. Logon to demo/hands-on systems [7](#logon-to-demohands-on-systems)**
-
-
-
-**4. Part 1: role based masking of fields [15](#part-1-role-based-masking-of-fields)**
-
-  **A. Overview and business scenario [15](#overview-and-business-scenario-1)**
-
-  **B. Test: baseline/”vanilla” system behaviour [15](#test-baselinevanilla-system-behaviour)**
-
-  **C. Configuration steps – simple role based scenario [16](#configuration-steps-simple-role-based-scenario)**
-
-  **D. Configuration steps – role based with Reveal on Demand [22](#configuration-steps-role-based-with-reveal-on-demand)**
-
-  **E. Test: protected business scenario [23](#test-protected-business-scenario)**
-
-
-
-**5. Part 2: policy based masking of fields [24](#part-2-policy-based-masking-of-fields)**
-
-  **A. Overview and business scenario [24](#overview-and-business-scenario-2)**
-
-  **B. Configuration steps [24](#configuration-steps)**
-
-  **C. Test: protected business scenario [33](#test-protected-business-scenario-1)**
-
-
-
-**6. Part 3: Policy based data blocking scenario [35](#part-3-policy-based-data-blocking-scenario)**
- 
-  **A. Overview and business scenario [35](#overview-and-business-scenario-3)**
- 
-  **B. Configuration steps [35](#configuration-steps-1)**
- 
-  **C. Test of protected business scenario [36](#test-of-protected-business-scenario)**
+## 5. Part 3: Policy based data blocking scenario [35](#part-3-policy-based-data-blocking-scenario)
+  ### A. Overview and business scenario [35](#overview-and-business-scenario-3)
+  ### B. Configuration steps [35](#configuration-steps-1)
+  ### C. Test of protected business scenario [36](#test-of-protected-business-scenario)
 
 
 
