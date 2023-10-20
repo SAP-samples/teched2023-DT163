@@ -311,6 +311,7 @@ In case the system displays the moving dots/sandclock icon (picture below) for t
 
 In the background, the system has identified additional table-field definitions, and if you scroll down to section “SAP GUI (Module Pool), you will also see several hundred Dynpro definitions:<img src="media/image64.png" style="width:6.26806in;height:2in" />
 
+
 Move on to the tab “Context Attributes”. This serves to define which other attributes may be required for the authorization determination through policies. This will be required later, but not for the role based determination we are building in this part.
 
 The same is true for tab “additional attributes”, which serves to identify additional information such as value lists or procedural determinations information required in a policy, but not available in the application proper – e.g. the manufacturer “CarbonSpeed” not always available in the documents processed in the previous demo).
@@ -429,7 +430,6 @@ In the Fiori Launchpad, click the app “Manage ABAC Policies”.
 In the “Manage ABAC policies” app, you will see a few entries already existing, pertaining to the UI5/Fiori based demo scenario as indicated in the policy name, and fallback entries for the training. Choose to “add” a new policy as “masking” policy and call it e.g. POL_MSK_MTGRP_XXXXXX (replace the X characters with your own identifiers if you like). Press “create”.
 
 <img src="media/image85.png" style="width:3.02362in;height:1.80315in" />
-o
 
 Navigate back to the Fiori Launchpad, open the “Manage Sensitive Attributes” app, and select the existing logical attribute LA_GUI_MATGRP. Navigate to the tab “Configuration”, where you will now set up the new policy. Choose “Edit”, then enable the masking. As authorization concept, select “Attribute Based Authorization” and assign the policy POL_MSK_MTGRP_XXXXXX you have just created.
 
