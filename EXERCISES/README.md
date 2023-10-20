@@ -9,19 +9,11 @@
 
 # Table of Contents
 
-**1. Table of Contents [2](#_Toc148094853)**
-
-
-
-**2. Introduction and Overview [3](#introduction-and-overview)**
-
-
-
-  **A. Overview and business scenario [3](#overview-and-business-scenario)**
-
-  **B. Introduction to UIDP Masking [3](#introduction-to-uidp-masking)**
-
-  **C. Quick live product demo [4](#quick-live-product-demo)**
+# 1. Table of Contents [2](#_Toc148094853)**
+# 2. Introduction and Overview [3](#introduction-and-overview)**
+  ## A. Overview and business scenario [3](#overview-and-business-scenario)**
+  ## B. Introduction to UIDP Masking [3](#introduction-to-uidp-masking)**
+  ## C. Quick live product demo [4](#quick-live-product-demo)**
 
 
 
