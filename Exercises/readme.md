@@ -70,14 +70,14 @@
 
 
 
-**<u>Introduction and Overview</u>**
+# **<u>Introduction and Overview</u>**
 
 
 
 
 
 
-**Overview and business scenario**
+## **Overview and business scenario**
 
 
 
@@ -108,7 +108,7 @@ We wish you an interesting session. We look forward to your feedback on the usef
 
 
 
-Introduction to UIDP Masking
+## Introduction to UIDP Masking
 
 
 
@@ -131,7 +131,7 @@ Enforcing controls for checking authorizations and revealing data “on demand�
 Quick live product demo
 For introduction, the following demo is closely based on a real life scenario (all data and names are fictitious).
 
-**Demo backstory **
+### Demo backstory
 Fictitious company DeltaBike are in the bicycle manufacturing business and currently working on an innovative E-Bike prototype under a secret project, internally called “DeltaSpeed”. 
 
 The prototype team needs to source materials and parts from a special supplier, named CarbonSpeed Labs. 
@@ -152,8 +152,8 @@ In this scenario, confidentiality of data pertaining to Project DeltaSpeed is de
 
 <img src="media/image5.png" style="width:6.26806in;height:2.14653in" />
  
+### Demo Scenario Overview
 
-**Demo Scenario Overview **
 This demo showcases a specific scenario involving the Procurement, Goods Receipt, Product Master and Bill of Materials process chains, including 3 users with distinct Levels of Access: 
 
  
@@ -165,13 +165,13 @@ This demo showcases a specific scenario involving the Procurement, Goods Receipt
 
  
 
-**Ben Collins (BCOLLINS) **
+**Ben Collins (BCOLLINS)**
 
 As an employee outside the DeltaSpeed Project team, Ben should not have access to display any information classified as Confidential. 
 
 The UI Blocking feature is used to suppress data rows and block entire screens from being displayed. 
 
-**Scott Morgan (SMORGAN) **
+**Scott Morgan (SMORGAN)**
 
 Despite being in the DeltaSpeed Team, as a warehouse operations specialist, Scott needs only information essential to carry out his day-to-day tasks. 
 
@@ -181,47 +181,52 @@ In the Material Documents scenario, Scott is situationally allowed to reveal suc
 
 Because Scott has no business use for any R&D data, access to Product Master Data and BOMs are blocked via Data Blocking feature. 
 
-**Aubrey Myers (AMYERS) **
+**Aubrey Myers (AMYERS)**
 
 Aubrey is the project lead and designs the product prototypes. To this end, she is allowed to display all Confidential information without restrictions. 
 
 In addition, Aubrey is also responsible for approving “Reveal on Demand” requests occasionally raised by Scott and his team. 
 
-**Process Flow **
+### Process Flow
 The below diagram showcases the main process flow. 
 
 This flow intentionally excludes the Level 1 user (BCOLLINS) as this user’s role is not relevant for the process chain – given that his access is thoroughly restricted via UI Blocking. 
 
 <img src="media/image7.png" style="width:6.26806in;height:2.80486in" />
 
-**<u>Training: Time to get busy!</u>**
 
-</details>
 
-<details>
-<summary>Overview UIDP Masking Configuration</summary>
+
+# **<u>Training: Time to get busy!</u>**
+
+
+## Overview UIDP Masking Configuration
 
 <img src="media/image8.png" style="width:6.26806in;height:2.27083in" />
+
 Logon to demo/hands-on systems
 The training scenarios are based in separate systems per user. Please identify IP address linked to your device/seat/ID. Best note it down separately for use in the next few steps.
 
-Access to Fiori Launchpad
+### Access to Fiori Launchpad
 The demo part and configurations are web browser based and accessible through the following link. Replace the expression [DOMAIN] (everything between “https://” and “:44301…”) manually with your terminal’s application server IP address from above).
 
 Your browser may complain that this is not a secure connection. Please override the warnings to access the system even in unsafe mode.
 
 Bookmark the link, or create a hyperlink e.g. on the desktop, for further use during this training.
 
-Access to SAP GUI
+### Access to SAP GUI
 The actual business scenario you will be building is based in the SAP GUI interface, which you can access through the training computer’s installation of SAP Logon. Please start SAP Logon (a local installation accessible in Windows start menu, or the icon on the desktop:
 
 <img src="media/image10.png" style="width:0.31102in;height:0.15748in" />
+
 To logon, choose to create a new connection:
 
 <img src="media/image12.png" style="width:3.27797in;height:1.69988in" />
+
 Select “user specified system” and press “Next”. In the following screen insert entries as described here and finish by “next” and “finish”:
 
 <img src="media/image14.png" style="width:4.50423in;height:4.73529in" />
+
 To conduct the configurations and business scenarios, you will be using the following users and credentials. Please note that in an actual productive scenario, there should be more roles – for simplicity, we have modeled Peter Munroe, the administrator, as a super user responsible for technical and business configurations, but also with access to business information and processes.
 
 | User| Password| Name| Type |
@@ -232,17 +237,21 @@ To conduct the configurations and business scenarios, you will be using the foll
 |BPINST|Welcome1|Peter Munroe|Administrator & Config user|
 
 <img src="media/image15.png" style="width:5.41389in;height:3.38472in" />
+
 Training data for the DeltaSpeed Alpha Bill of Materials structure and all relevant material numbers (Bill of materials/BOM with header material and components:
 
 In order to later on configure UIDP Masking, we will require technical address information for various fields – either because they are sensitive (to be protected), drive the authorization determination, or both. Let’s get them right now: In SAP Logon, open the system, log on as Administrator Peter Munroe (BPINST), go to transaction MM02, and access any of the above materials. We will require the technical information for the fields marked below.
 
 <img src="media/image19.png" style="width:5.55363in;height:4.11692in" />
+
 In order to determine the technical field addresses in SAP GUI, right click on the field, choose “Help”, and click on the wench tool icon for “technical information”.
 
 <img src="media/image22.png" style="width:2.48651in;height:0.71883in" /><img src="media/image23.png" style="width:2.09469in;height:1.18822in" />
+
 In the following screen, mark the information for data element, database table and field, as well as the Program, Dynpro screen number, and Screen field:
 
 <img src="media/image29.png" style="width:3.16535in;height:3.94094in" />
+
 Repeat for the other fields – or cross-check with the information maintained here:
 
 
@@ -258,27 +267,32 @@ Field|Data Element|Table Name|Field Name|Program Name|Screen Number|Screen Field
 That’s it for preparations… let’s get started with the configuration!
 
 
-<u>Part 1: role based masking of fields</u>
-Overview and business scenario
+# Part 1: role based masking of fields
+
+## Overview and business scenario
 For the CarbonSpeed project, the key target is the radical reduction of weight of the DeltaSpeed Alpha – every gram scraped off the bike’s mass is reason to celebrate! This also means that weight information e.g. in the material master is sensitive – required to be seen by project members only.
 
 In this section, you will configure material weight information to be considered sensitive, and assign the project members as personnel authorized to see the data – albeit with a twist so even they do not always/immediately have complete access.
 
-Test: baseline/”vanilla” system behaviour
+## Test: baseline/”vanilla” system behaviour
 Log into a session of SAP GUI with user BCOLLINS.
 
 Call transaction MM02 (Change Material), start typing a material number CS-A1 and pick any from the search help list and display details. You should see all fields in the transaction accessible and in change mode. Pay special attention to the two fields of “net weight” and gross weight” as you will be protecting and restricting access to these in the next few steps.
 
 <img src="media/image36.png" style="width:5.5892in;height:4.73837in" />
-Configuration steps – simple role based scenario
+
+## Configuration steps – simple role based scenario
+
 Access the Fiori Launchpad and logon as Peter Munroe (BPINST).
 
 In the Fiori Launchpad start screen, choose the tab for UIDP Masking Configuration, and then the tile for “Manage Sensitive Attributes”:
 
 <img src="media/image38.png" style="width:6.26806in;height:2.30903in" />
+
 In the app screen, check that your user is assigned to a transport request (where configurations are stored so they can be transported from config clients through the system landscape into the productive clients).
 
 <img src="media/image39.png" style="width:6.26806in;height:1.54583in" /><img src="media/image40.png" style="width:1.97244in;height:1.93307in" />
+
 As a first step, you will define information on materials’ gross weight as sensitive.
 
 In the “manage sensitive attributes” app, choose to create a new entry, insert name/description and press “create”.
@@ -286,16 +300,19 @@ In the “manage sensitive attributes” app, choose to create a new entry, inse
 (we suggest using the below names & descriptions; however you may choose your own ones as long as you adhere to a few naming conventions which the system will ensure).
 
 <img src="media/image39.png" style="width:6.26806in;height:1.54583in" /> <img src="media/image44.png" style="width:1.78778in;height:1.15243in" />
+
 Result: you have defined a new “sensitive attribute”.
 
 Access the details of your new attribute to fill in additional required information.
 
 <img src="media/image46.png" style="width:6.26806in;height:1.74514in" />
+
 In a first step, you will create the configuration required for the system to understand which data pertain to this attribute and are to be treated by the mechanisms defined in a following step.
 
 In the tab “Technical Mapping”, locate the section “SAP GUI (Table – Field) and add an entry with button “+”. In the mapping screen, maintain the table and field name of the gross weight you have identified earlier (here: table MARA, field name BRGEW which is an abbreviation of the German word “Bruttogewicht” meaning - surprise! - “gross weight”).
 
 <img src="media/image51.png" style="width:6.26806in;height:2.81319in" /> <img src="media/image52.png" style="width:2.55906in;height:1.52756in" />
+
 For the purpose of this training, the above entry is sufficient; in a productive scenario, you might want to put in additional definitions which are pointing to “gross weight” UI fields across the system, based on table-field definitions, data elements, and from other UIs as well.
 
 The table-field definition is sufficient for obtaining masking in database table display transactions, e.g. SE11, SE16n… This is not yet sufficient however for business transactions, where masking is triggered by the UI field definition that you have checked out in the in the chapter on “Access to SAP GUI”. There can be literally thousands of such “SAP GUI Module Pool” entries across various transactions and modules of an SAP system!
@@ -304,44 +321,57 @@ For the benefit of understanding this key configuration entity of UIDP Masking, 
 Scroll down the page to the section “SAP GUI (Module Pool)”. Clock “+” to add an entry, and maintain for program SAPLMGD1, Screen Number 2007, Field Name MARA-BRGEW:
 
 <img src="media/image54.png" style="width:3.13039in;height:1.84647in" />
+
 Such a manual step for adding single screen fields to the configuration may be required in normal implementations. This should be rare cases though; most entries will be added automatedly by the “mass configuration” utility. Manual entries are only necessary when this where-used functionality does not detect a screen occurrence (which you will notice during testing). Let’s look at the mass configuration utility next.
 
 In the top right corner of the attribute definition screen, click the item for “mass configuration”. In the ensuing screen, click “execute” to trigger the automatic determination of data element, more linked table-screen definitions, and from all this, determination and configuration for UI occurrences linked to these. You can close the screen after that; or wait for a few seconds before clicking “refresh” and confirm the success message with “close”.
 
-<img src="media/image58.png" style="width:6.26806in;height:0.78125in" /><img src="media/image59.png" style="width:2.34405in;height:1.273in" /><img src="media/image60.png" style="width:2.55906in;height:1.25984in" /> <img src="media/image62.png" style="width:2.30231in;height:0.98468in" />
+<img src="media/image58.png" style="width:6.26806in;height:0.78125in" />
+<img src="media/image59.png" style="width:2.34405in;height:1.273in" />
+<img src="media/image60.png" style="width:2.55906in;height:1.25984in" /> 
+<img src="media/image62.png" style="width:2.30231in;height:0.98468in" />
+
 In case the system displays the moving dots/sandclock icon (picture below) for too long, reload the page from the browser (or F5 button).
 
 <img src="media/image63.png" style="width:0.64173in;height:0.3937in" />
+
 In the background, the system has identified additional table-field definitions, and if you scroll down to section “SAP GUI (Module Pool), you will also see several hundred Dynpro definitions:<img src="media/image64.png" style="width:6.26806in;height:2in" />
 
 Move on to the tab “Context Attributes”. This serves to define which other attributes may be required for the authorization determination through policies. This will be required later, but not for the role based determination we are building in this part.
 
-The same is true for tab “additional attributes”, which serves to identify additional information such as value lists or procedural determinations information required in a policy, but not available in the application proper – e.g. the manufacturer “CarbonSpeed” not always available in the documents processed in the previous demo).<img src="media/image66.png" style="width:6.26806in;height:1.22986in" />
+The same is true for tab “additional attributes”, which serves to identify additional information such as value lists or procedural determinations information required in a policy, but not available in the application proper – e.g. the manufacturer “CarbonSpeed” not always available in the documents processed in the previous demo).
+<img src="media/image66.png" style="width:6.26806in;height:1.22986in" />
 
 <img src="media/image67.png" style="width:5.55477in;height:2.03027in" />
+
 In the tab “Configuration”, we will define the authorization determination. Choose “edit”, and then “enable masking”, and “role based authorization”.
 
 <img src="media/image69.png" style="width:5.61151in;height:0.89836in" />
+
 As the role (required for users to be authorized), maintain “ZUIDP_L2+3” which is mapped to the project members Scott Morgan and Aubrey Myers, but not Ben Collins.
 
 For unauthorized users, configure that the field level action to protect the value shall be “Full Length” (or another action if you like).
 
 <img src="media/image70.png" style="width:5.55572in;height:3.05361in" />
+
 Save the entry, so the screen goes back into display mode.
 
 With this, you’re done defining your first sensitive attribute!
 
-Navigate one step back, to the Manage Sensitive Attributes Overview screen. Here, trigger the function in the top right corner to “Generate Program”. This will generate the necessary programs for UIDP Masking in the background. The process takes about a minute.
+Navigate one step back, to the Manage Sensitive Attributes Overview screen. Here, trigger the function in the top right corner to “Generate Program”. This will generate the necessary programs for UIDP Masking in the background. The process takes about 1-2 minutes.
 
 <img src="media/image72.png" style="width:5.63083in;height:0.83346in" />
+
 Test the settings in MM02 for user BCOLLINS who should not see the clear gross weight anymore. You may run a counter test for users SMORGAN or AMYERS who should be shown the clear value.
 
-Configuration steps – role based with Reveal on Demand
+## Configuration steps – role based with Reveal on Demand
+
 Let’s create another, more advanced scenario first though. Consider the Net Weight as even more critical information – after all, the absolute weight of the components alone determines the core of the whole project’s value!
 
 Navigate back to the “Manage Sensitive Attributes” Overview screen and choose to create another attribute for material net weight.
 
 <img src="media/image73.png" style="width:1.80315in;height:1.18504in" />
+
 In tab “Technical Mapping”, add table-field value MARA-NTGEW. Trigger the mass configuration in the top right corner and wait for several seconds.
 
 In the Section “SAP GUI (Module Pool), check whether the entry was created for program name SAPLMGD1; screen number 2007; field name MARA-NTGEW. If not, add this entry manually.
@@ -349,6 +379,7 @@ In the Section “SAP GUI (Module Pool), check whether the entry was created for
 Again, navigate one step back, to the Manage Sensitive Attributes Overview screen. Here, trigger the function in the top right corner to “Generate Program”:
 
 <img src="media/image72.png" style="width:5.63083in;height:0.83346in" />
+
 In the pop-ups, choose Execute, and then close.
 
 <!-- -->
@@ -356,10 +387,12 @@ Move to the tab “Configurations” and maintain as in the previous case:
 Enable Masking;
 choose role based authorization, and as role again maintain “ZUIDP_L2+3” (mapped to the project members Scott Morgan and Aubrey Myers, but not Ben Collins).
 As main difference, set the flag for “Reveal on Demand” and indicate the reveal type as “self service”. This will drive a quite different behavior for this field than in the previous case: the field will be masked in the configured manner even for authorized users Scott and Aubrey; who can however request to have the data revealed as we will see in the test section.
+
 <img src="media/image75.png" style="width:3.30315in;height:2.72441in" />
+
 The configuration for the first scenario is now complete.
 
-Test: protected business scenario
+## Test: protected business scenario
 Log into a session of SAP GUI with user AMYERS. Call transaction MM02, start typing a material number CS-A1… and pick any of the Carbon Speed relevant materials from the search help list.
 AMYERS should see the gross weight in clear, and the net weight in the way you have just configured for protection.
 
@@ -373,7 +406,7 @@ After screen re-load, a confirmation is displayed in the footer bar, and both we
 
 Log on a SAP GUI session for user BCOLLINS and repeat the above steps. You should see both the gross and net weight in protection fashion. Upon triggering “reveal on”, the process aborts as there is nothing to reveal for this user (in the latest versions a different behavior is implemented: the “reveal on” function is only displayed if there are revealable field in the screen.)
 
-<u>Part 2: policy based masking of fields</u>
+# <u>Part 2: policy based masking of fields</u>
 Overview and business scenario
 While in the above scenario we have set up a masking of specific fields, the authorization logic really may be too simple. Yes, a non-project related employee has no access to data on critical materials. But he’s also not having access to the same data for other non-critical materials – that he may well need to know in his role! Thus, properties (attributes) of the materials actually play a role in determining their sensitivity, and who must, may, may not get access.
 
@@ -385,8 +418,10 @@ In effect, there are now two attributes which both are sensitive (material group
 
 You will first set up the “material group” as logical attribute and create the value range for protected material groups. You will then build the simple policy for disabling the field. Afterwards, you will repeat the steps for the “material description” field and, based on the previous steps for material group, define the policy linking material group, value range, and material description.
 
-Configuration steps
+## Configuration steps
 The configuration steps in this section to some extent resemble those ins section one.
+
+## Step 1
 
 In the Fiori Launchpad, as Peter Munroe (user BPINST), navigate to the “Manage Sensitive Attributes” app. Create a new attribute relevant for material group information, e.g. LA_GUI_MATGRP and save.
 
@@ -396,17 +431,21 @@ In this case, add a manual entry in the section SAP GUI (Module Pool) with Progr
 The tab for context attributes stays empty, but in the tab for “additional attributes”, choose to add a “value range” as “List of Values” and call it “VR_SENSITIVE_MAT_GRPS” with a description you like. Click on “Create”.
 
 <img src="media/image78.png" style="width:5.58639in;height:2.48992in" />
+
 Enter the newly created value range and maintain those material groups that are to be protected. Add a new value “Z991”, which is the material group pertaining to the BOM Header material CS-A1-X100, and add a description you like.
 
 <img src="media/image80.png" style="width:5.5519in;height:1.91788in" />
+
 Scroll down a little, and in the section “contains pattern” add an entry “ZF*” and choose to create. This entry will pertain to materials CS-A1-X100-01 and CS-A1-X100-05, which belong to the material groups “<u>ZF</u>RAME” and “<u>ZF</u>ORK,” respectively.
 
 <img src="media/image81.png" style="width:5.56002in;height:1.97798in" />
+
 Before working on the authorization configuration, we need to do one additional step and create the technical object that is the policy (a bug in the installed version of UIDP prevents policy creation from within the Logical Attribute). To do this, navigate back to the logical attribute, back to the list of attributes, and back to the Fiori Launchpad.
 
 In the Fiori Launchpad, click the app “Manage ABAC Policies”.
 
 <img src="media/image83.png" style="width:5.56724in;height:1.7659in" />
+
 In the “Manage ABAC policies” app, you will see a few entries already existing, pertaining to the UI5/Fiori based demo scenario as indicated in the policy name, and fallback entries for the training. Choose to “add” a new policy as “masking” policy and call it e.g. POL_MSK_MTGRP_XXXXXX (replace the X characters with your own identifiers if you like). Press “create”.
 
 <img src="media/image85.png" style="width:3.02362in;height:1.80315in" />
@@ -415,17 +454,21 @@ o
 Navigate back to the Fiori Launchpad, open the “Manage Sensitive Attributes” app, and select the existing logical attribute LA_GUI_MATGRP. Navigate to the tab “Configuration”, where you will now set up the new policy. Choose “Edit”, then enable the masking. As authorization concept, select “Attribute Based Authorization” and assign the policy POL_MSK_MTGRP_XXXXXX you have just created.
 
 <img src="media/image86.png" style="width:4.24803in;height:3.55906in" />
+
 Save the settings, upon which the screen returns to display mode.
 
 Click the name of the policy which is now a hyperlink marked blue. Scroll down to section “Rule”. Here, press “edit”, which will call the ABAC Policy Cockpit where policies can be modelled. Make sure to be in edit mode: if the menu bar shows less entries than the below screen shot, then toggle the “Display Edit” switch.
 
 <img src="media/image89.png" style="width:5.55045in;height:1.918in" />
+
 As a first step, choose to “Add Block”, give a block description and “continue”.
 
 <img src="media/image91.png" style="width:5.63172in;height:1.18487in" />
+
 In the left hand navigation pane, expand the policy and the block.
 
 <img src="media/image92.png" style="width:0.97244in;height:0.76772in" />
+
 Double-click on “pre-condition”.
 In this screen, you are assigning and operationally linking different attributes. In the simplest form, you are defining which attribute (“left side”) is checked for its status or relation (“operator”) to another attribute (“rights side”).
 
@@ -434,28 +477,38 @@ Why? The fields and rules would equally apply to MM03 change and MM01 create tra
 In the screen, in the “left side” section, double click the entry “SY-TCODE” so it appears in the upper window; then in section “operator” click on “=” and finally in operator section, click on “constant” and enter the value “MM02” (careful – the application is case sensitive for these entries).
 
 <img src="media/image95.png" style="width:5.56115in;height:2.29938in" />
+
 Next, we set up the actual rule that will apply in case of an access through MM03.
 First, click on “Rule” to call the actual policy definition functionality.
 
 <img src="media/image96.png" style="width:5.5515in;height:2.99892in" />
+
 Double click on the context attribute “LA_GUI_MATGRP” so it will appear in the policy definition. Next, in the section of operators, click on button “in”, then for the right side double click on the value range you have previously created:
 
 <img src="media/image100.png" style="width:5.55537in;height:3.02388in" />
+
 You have now set up the system to compare the value it gets for the material group to the values maintained in the value range.
 
 Next, for the case this check is true, you will determine how the system reacts. Click on the button “result” and in the following pop-up, choose the action “disable for editing…”.
 “Reveal on Demand” should remain disabled, Field access trace” is irrelevant (you will not be looking into this in the workshop). Press Enter.
 
 <img src="media/image101.png" style="width:3.01969in;height:3.24016in" />
+
 Back in the main policy definition screen, in the left hand section double-click on “Default Result of Policy” to define what happens in case all policy blocks are not meeting the pre-conditions. Here, set the action to “authorize” (i.e. the access to the requested data is granted); Reveal on Demand is greyed out (irrelevant) and Field Access Trace is again not treated in this scenario. Choose “save”.
 
 <img src="media/image102.png" style="width:2.49606in;height:1.73622in" />
+
 Lastly, two necessary technical steps to activate the policy.
 First, in the header line, choose “check” to identify functional errors; then press “generate” and in the pop-up window accept the pre-filled workbench request and press Continue, and again on the following screen.
 
 <img src="media/image104.png" style="width:5.56024in;height:1.31583in" />
+
 This concludes the first step of part 2 – next we’ll be setting up the protection for material descriptions fields.
 
+
+
+
+## Step 2
 If you want to run a test, do so with Aubrey Myers and ensure that even this highly authorized user sees but can’t change the material group values in MM02 for sensitive materials of the material types “ZF*” and Z991, and thus in the materials CS-A1-X100, CS-A1-X100-01, and CS-A1-X100-05.
 
 Return to the Fiori configuration app and to the “Manage Sensitive Attributes” app. Create a new logical attribute “LA_GUI_MATDESCRIPTION”.
@@ -475,7 +528,8 @@ After saving, click on the policy name/link to call policy details. In the Role 
 No pre-conditions this time around – jump to the rule section immediately. Set up the rule in the following fashion:
 
 <img src="media/image105.png" style="width:1.54331in;height:0.70866in" />
-Hints:
+
+**Hints:**
 
 You will find the term/attribute PFCG_ROLE in the Left Side section “Env Variable”.
 
@@ -488,6 +542,7 @@ Create a new block you could call “Allow RoD for authorized users” (all L1 n
 In the “Rule” section , you only activate the policy to check whether the material group is in the sensitive value range. For that case, maintain the result as “disable edit”, with Reveal on Demand being active with self service (so L2 and L3 users can get the value when they need access). Field Access Trace will not be considered, choose any value here.
 
 <img src="media/image106.png" style="width:3.29921in;height:0.47638in" />
+
 Last, maintain the “Default Result” in the fashion you’d like authorized personnel to see the material description – masked, display-only, removed; with or without Reveal on Demand option and any Field Access Trace option.
 
 Save the policy, check for errors, and generate.
@@ -495,9 +550,10 @@ Save the policy, check for errors, and generate.
 Navigate back to the “Manage Sensitive Attribute” overview/list view. Here, choose the functional button to “Generate program” and press execute to start the process.
 
 <img src="media/image108.png" style="width:5.4996in;height:1.89434in" />
-Wait for ca. half a minute before pressing “refresh” and checking that the run was successful. Then close the window.
+Wait for ca. one minute before pressing “refresh” and checking that the run was successful. If not, wait for a bit longer. If you run into an error, close the pop-up and click on "generate programs" again. When the run was successufly, you may close the window.
 
-Test: protected business scenario
+## Test: protected business scenario
+
 Log into two SAP GUI instances with both AMYERS and BCOLLINS. You might put the two windows side by side into your screen again.
 
 With both users, call transaction MM02, start typing a material number CS-A1 and pick any material from the list which is not sensitive, e.g. CS-A1-X100-02, -03, 04, 06, 07…. Compare the results – the fields for description and material group are identically open for both users.
@@ -511,13 +567,15 @@ You will receive a summary that access to the requested field(s) was self-approv
 Nevertheless – this RoD procedure is logged in the background, and visible as well with UIDP Logging.
 
 <img src="media/image109.png" style="width:4.24803in;height:1.85433in" />
+
 If you do the same for BCOLLINS, there is no system response as there is no field with possible reveal functionality; unless for materials of non-sensitive material groups and you’ve allowed RoD as the default result.
 
-<u>Part 3: Policy based data blocking scenario</u>
-Overview and business scenario
+# <u>Part 3: Policy based data blocking scenario</u>
+
+## Overview and business scenario
 In a final step, we will determine that the BOM header material CS-A1-X100 is even more sensitive; and must be available only to users with highest level clearance, in this case Aubrey Myers – all other users shall be blocked from accessing the CS-A1-X100 material data.
 
-Configuration steps
+## Configuration steps
 Create a new Logical Attribute called “LA_GUI_MATNR”.
 
 In Technical Mapping, in the section SAP GUI (Module Pool), maintain two entries manually (mass configuration for this data element is not suggested in this training – it will run for 20-30mins and result in tens of thousands of table and screen field definitions! If you have already triggered, you may want to open another browser tab to continue working in the config apps.)
@@ -548,6 +606,7 @@ If the rule is not editable, select “Display <-> Edit” to be able to change 
 Maintain the rule as follows:
 
 <img src="media/image110.png" style="width:1.88976in;height:0.47244in" />
+
 Again, the PFCG_ROLE is a “Left Side” environment variable and the ZUIM… role name maintained as a constant (careful – case sensitive).
 
 In default result, choose to “authorize” (i.e. L3 clearance obtains the values), choose whether to save a trace, and save.
@@ -556,7 +615,7 @@ Check and generate the policy.
 
 Return to the “Manage Sensitive Attributes” list view, hit “generate program” and check for successful status after 1-2 minutes.
 
-Test of protected business scenario
+## Test of protected business scenario
 Switch to the SAP GUI installations of AMYERS or BCOLLINS. You might put the two windows side by side into your screen again.
 
 In MM02, enter the BOM header material code CS-A1-X100 – you will stay in the selection screen and get the warning message that the material seems to be blocked.
@@ -568,4 +627,5 @@ Do the same in BOM transaction CS02 for plant 1710 and usage 2.
 Switch to table display (SE16 or SE16n) and try to find material CS-A1-X100 in the search help and tables MARA; MAKT, and MAST. You should not be able to find these in case the configuration setup is correct; instead note the footer message that some entries are excluded:
 
 <img src="media/image116.png" style="width:5.58881in;height:4.40553in" />
-Thank you for spending your time with us today – and looking forward to being in touch!
+
+# Thank you for spending your time with us today – and looking forward to being in touch!
