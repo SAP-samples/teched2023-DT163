@@ -223,14 +223,9 @@ In the following screen, mark the information for data element, database table a
 Repeat for the other fields – or cross-check with the information maintained here:
 <br/>
 
-| User| Password| Name| Type |
-|--------:|----------:|--------------:|------------------:|
-|BCOLLINS| Welcome1| Ben Collins| Level 1 Clearance|
-|SMORGAN | Welcome1| Scott Morgan| Level 2 Clearance|
-|AMYERS|Welcome1|Aubrey Myers|Level 3 Clearance|
-|BPINST|Welcome1|Peter Munroe|Administrator & Config user|
 
-Field|Data Element|Table Name|Field Name|Program Name|Screen Number|Screen Field
+
+Field|Data Element|Table Name|Field Name|Program Name|Screen Number|Screen Field|
 |------------------:|-----------------:|--------------:|------------:|-------------:|------------:|------------:|
 |Descr|MAKTX|MAKT|MAKTX|SAPLMGD1|1002|MAKT-MAKTX|
 |Material [Number] |MATNR|RMMG1|MATNR|SAPLMGD1|1002|RMMG1-MATNR|
