@@ -106,7 +106,7 @@ For introduction, the following demo is closely based on a real life scenario (a
 <br/>
 
 
-**1.C. Demo backstory**
+#### 1.C. Demo backstory
 Fictitious company DeltaBike are in the bicycle manufacturing business and currently working on an innovative E-Bike prototype under a secret project, internally called “DeltaSpeed”. 
 
 The prototype team needs to source materials and parts from a special supplier, named CarbonSpeed Labs. 
@@ -124,7 +124,7 @@ In this scenario, confidentiality of data pertaining to Project DeltaSpeed is de
 <br/>
 
  
-**Demo Scenario Overview**
+#### Demo Scenario Overview
 
 This demo showcases a specific scenario involving the Procurement, Goods Receipt, Product Master and Bill of Materials process chains, including 3 users with distinct Levels of Access: 
 
@@ -138,6 +138,7 @@ This demo showcases a specific scenario involving the Procurement, Goods Receipt
 As an employee outside the DeltaSpeed Project team, Ben should not have access to display any information classified as Confidential. 
 
 The UI Blocking feature is used to suppress data rows and block entire screens from being displayed. <br/>
+
 
 **Scott Morgan (SMORGAN)**
 
@@ -160,7 +161,7 @@ In addition, Aubrey is also responsible for approving “Reveal on Demand” req
 
 
 
-### Process Flow
+#### Process Flow
 The below diagram showcases the main process flow. 
 
 This flow intentionally excludes the Level 1 user (BCOLLINS) as this user’s role is not relevant for the process chain – given that his access is thoroughly restricted via UI Blocking. 
