@@ -65,6 +65,7 @@ C. Test of protected business scenario [36](#test-of-protected-business-scenario
 
 A. Test: protected business scenario [39](#test-protected-business-scenario-2)
 
+</details>
 <details>
 <summary><u>Introduction and Overview</u></summary>
 
