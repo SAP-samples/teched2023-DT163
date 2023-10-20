@@ -20,8 +20,7 @@
 <br/>
 
 ## 2. Training: Time to get busy! [7](#training-time-to-get-busy)
-  ### A. Overview UIDP Masking Configuration [7](#overview-uidp-masking-configuration)
-  ### B. Logon to demo/hands-on systems [7](#logon-to-demohands-on-systems)
+   ### A. Logon to demo/hands-on systems [7](#logon-to-demohands-on-systems)
 <br/>
 
 ## 3. Part 1: role based masking of fields [15](#part-1-role-based-masking-of-fields)
@@ -78,11 +77,7 @@ We wish you an interesting session. We look forward to your feedback on the usef
 <br/>
 
 
-
-
-
 ## 1.B. Introduction to UIDP Masking
-
 
 
 New legislation worldwide makes companies responsible for controlling who can access, view, and modify sensitive data internally; both for tracking access as well as further securing sensitive data. This requires a flexible, granular way to limit access to critical fields to authorized users. 
@@ -101,12 +96,12 @@ Applying dynamic and context aware authorizations, based on meta data (attribute
 
 Enforcing controls for checking authorizations and revealing data “on demand”: sensitive fields are initially masked, independent of a user’s authorization. Authorization check can be requested by the user, potentially requiring additional approval and resulting in un-masking if appropriate. The actions and results are recorded for review and audit purposes. 
 
-### 1.C. Quick live product demo
+## 1.C. Quick live product demo
 For introduction, the following demo is closely based on a real life scenario (all data and names are fictitious).
 <br/>
 
 
-#### 1.C. Demo backstory
+### Demo backstory
 Fictitious company DeltaBike are in the bicycle manufacturing business and currently working on an innovative E-Bike prototype under a secret project, internally called “DeltaSpeed”. 
 
 The prototype team needs to source materials and parts from a special supplier, named CarbonSpeed Labs. 
@@ -124,7 +119,7 @@ In this scenario, confidentiality of data pertaining to Project DeltaSpeed is de
 <br/>
 
  
-#### Demo Scenario Overview
+### Demo Scenario Overview
 
 This demo showcases a specific scenario involving the Procurement, Goods Receipt, Product Master and Bill of Materials process chains, including 3 users with distinct Levels of Access: 
 
@@ -161,7 +156,7 @@ In addition, Aubrey is also responsible for approving “Reveal on Demand” req
 
 
 
-#### Process Flow
+### Process Flow
 The below diagram showcases the main process flow. 
 
 This flow intentionally excludes the Level 1 user (BCOLLINS) as this user’s role is not relevant for the process chain – given that his access is thoroughly restricted via UI Blocking. 
@@ -171,20 +166,20 @@ This flow intentionally excludes the Level 1 user (BCOLLINS) as this user’s ro
 
 
 
-# **<u>Training: Time to get busy!</u>**
+# **<u>2. Training: Time to get busy!</u>**
+<br/>
 
-
-## Logon to demo/hands-on systems
+## 2.A. Logon to demo/hands-on systems
 The training scenarios are based in separate systems per user. Please identify IP address linked to your device/seat/ID. Best note it down separately for use in the next few steps.
+<br/>
 
-## Access to Fiori Launchpad
+### Access to Fiori Launchpad
 The demo part and configurations are web browser based and accessible through the following link. Replace the expression [DOMAIN] (everything between “https://” and “:44301…”) manually with your terminal’s application server IP address from above).
-
 Your browser may complain that this is not a secure connection. Please override the warnings to access the system even in unsafe mode.
-
 Bookmark the link, or create a hyperlink e.g. on the desktop, for further use during this training.
+<br/>
 
-## Access to SAP GUI
+### Access to SAP GUI
 The actual business scenario you will be building is based in the SAP GUI interface, which you can access through the training computer’s installation of SAP Logon. Please start SAP Logon (a local installation accessible in Windows start menu, or the icon on the desktop:
 
 <img src="media/image10.png" style="width:0.31102in;height:0.15748in" />
@@ -198,6 +193,7 @@ Select “user specified system” and press “Next”. In the following screen
 <img src="media/image14.png" style="width:4.50423in;height:4.73529in" />
 
 To conduct the configurations and business scenarios, you will be using the following users and credentials. Please note that in an actual productive scenario, there should be more roles – for simplicity, we have modeled Peter Munroe, the administrator, as a super user responsible for technical and business configurations, but also with access to business information and processes.
+<br/>
 
 | User| Password| Name| Type |
 |--------:|----------:|--------------:|------------------:|
@@ -207,6 +203,7 @@ To conduct the configurations and business scenarios, you will be using the foll
 |BPINST|Welcome1|Peter Munroe|Administrator & Config user|
 
 <img src="media/image15.png" style="width:5.41389in;height:3.38472in" />
+<br/>
 
 ## Relevant data records
 Training data for the DeltaSpeed Alpha Bill of Materials structure and all relevant material numbers (Bill of materials/BOM with header material and components:
@@ -224,8 +221,7 @@ In the following screen, mark the information for data element, database table a
 <img src="media/image29.png" style="width:3.16535in;height:3.94094in" />
 
 Repeat for the other fields – or cross-check with the information maintained here:
-
-
+<br/>
 
 Field|Data Element|Table Name|Field Name|Program Name|Screen Number|Screen Field
 |:|:|:|:|:|:|:|
@@ -237,22 +233,27 @@ Field|Data Element|Table Name|Field Name|Program Name|Screen Number|Screen Field
 
 That’s it for preparations… let’s get started with the configuration!
 
+<br/>
 
-# Part 1: role based masking of fields
 
-## Overview and business scenario
+# 3. Part 1: role based masking of fields
+<br/>
+
+## 3.A. Overview and business scenario
 For the CarbonSpeed project, the key target is the radical reduction of weight of the DeltaSpeed Alpha – every gram scraped off the bike’s mass is reason to celebrate! This also means that weight information e.g. in the material master is sensitive – required to be seen by project members only.
 
 In this section, you will configure material weight information to be considered sensitive, and assign the project members as personnel authorized to see the data – albeit with a twist so even they do not always/immediately have complete access.
+<br/>
 
-## Test: baseline/”vanilla” system behaviour
+## 3.B. Test: baseline/”vanilla” system behaviour
 Log into a session of SAP GUI with user BCOLLINS.
 
 Call transaction MM02 (Change Material), start typing a material number CS-A1 and pick any from the search help list and display details. You should see all fields in the transaction accessible and in change mode. Pay special attention to the two fields of “net weight” and gross weight” as you will be protecting and restricting access to these in the next few steps.
 
 <img src="media/image36.png" style="width:5.5892in;height:4.73837in" />
+<br/>
 
-## Configuration steps – simple role based scenario
+## 3.C. Configuration steps – simple role based scenario
 
 Access the Fiori Launchpad and logon as Peter Munroe (BPINST).
 
@@ -334,8 +335,9 @@ Navigate one step back, to the Manage Sensitive Attributes Overview screen. Here
 <img src="media/image72.png" style="width:5.63083in;height:0.83346in" />
 
 Test the settings in MM02 for user BCOLLINS who should not see the clear gross weight anymore. You may run a counter test for users SMORGAN or AMYERS who should be shown the clear value.
+<br/>
 
-## Configuration steps – role based with Reveal on Demand
+## 3.D. Configuration steps – role based with Reveal on Demand
 
 Let’s create another, more advanced scenario first though. Consider the Net Weight as even more critical information – after all, the absolute weight of the components alone determines the core of the whole project’s value!
 
@@ -362,8 +364,9 @@ As main difference, set the flag for “Reveal on Demand” and indicate the rev
 <img src="media/image75.png" style="width:3.30315in;height:2.72441in" />
 
 The configuration for the first scenario is now complete.
+<br/>
 
-## Test: protected business scenario
+## 3.E. Test: protected business scenario
 Log into a session of SAP GUI with user AMYERS. Call transaction MM02, start typing a material number CS-A1… and pick any of the Carbon Speed relevant materials from the search help list.
 AMYERS should see the gross weight in clear, and the net weight in the way you have just configured for protection.
 
@@ -377,8 +380,10 @@ After screen re-load, a confirmation is displayed in the footer bar, and both we
 
 Log on a SAP GUI session for user BCOLLINS and repeat the above steps. You should see both the gross and net weight in protection fashion. Upon triggering “reveal on”, the process aborts as there is nothing to reveal for this user (in the latest versions a different behavior is implemented: the “reveal on” function is only displayed if there are revealable field in the screen.)
 
-# <u>Part 2: policy based masking of fields</u>
-Overview and business scenario
+# <u>4. Part 2: policy based masking of fields</u>
+<br/>
+
+## 4.A. Overview and business scenario
 While in the above scenario we have set up a masking of specific fields, the authorization logic really may be too simple. Yes, a non-project related employee has no access to data on critical materials. But he’s also not having access to the same data for other non-critical materials – that he may well need to know in his role! Thus, properties (attributes) of the materials actually play a role in determining their sensitivity, and who must, may, may not get access.
 
 So let’s draw up a better approach for the next scenario right away: We now base the authorization decision not only on a role, but also determine in a policy that the masking shall be active only for materials with specific properties.
@@ -388,11 +393,13 @@ The mechanics of this scenario is that the “material group” information of a
 In effect, there are now two attributes which both are sensitive (material group and material description); plus a determination which values of material group are to be protected, and we will connect all three by means of authorization policies.
 
 You will first set up the “material group” as logical attribute and create the value range for protected material groups. You will then build the simple policy for disabling the field. Afterwards, you will repeat the steps for the “material description” field and, based on the previous steps for material group, define the policy linking material group, value range, and material description.
+<br/>
 
-## Configuration steps
+## 4.B. Configuration steps
 The configuration steps in this section to some extent resemble those ins section one.
+<br/>
 
-## Step 1
+### Step 1
 
 In the Fiori Launchpad, as Peter Munroe (user BPINST), navigate to the “Manage Sensitive Attributes” app. Create a new attribute relevant for material group information, e.g. LA_GUI_MATGRP and save.
 
@@ -475,11 +482,9 @@ First, in the header line, choose “check” to identify functional errors; the
 <img src="media/image104.png" style="width:5.56024in;height:1.31583in" />
 
 This concludes the first step of part 2 – next we’ll be setting up the protection for material descriptions fields.
+<br/>
 
-
-
-
-## Step 2
+### Step 2
 If you want to run a test, do so with Aubrey Myers and ensure that even this highly authorized user sees but can’t change the material group values in MM02 for sensitive materials of the material types “ZF*” and Z991, and thus in the materials CS-A1-X100, CS-A1-X100-01, and CS-A1-X100-05.
 
 Return to the Fiori configuration app and to the “Manage Sensitive Attributes” app. Create a new logical attribute “LA_GUI_MATDESCRIPTION”.
@@ -523,7 +528,7 @@ Navigate back to the “Manage Sensitive Attribute” overview/list view. Here, 
 <img src="media/image108.png" style="width:5.4996in;height:1.89434in" />
 Wait for ca. one minute before pressing “refresh” and checking that the run was successful. If not, wait for a bit longer. If you run into an error, close the pop-up and click on "generate programs" again. When the run was successufly, you may close the window.
 
-## Test: protected business scenario
+## 4.C. Test: protected business scenario
 
 Log into two SAP GUI instances with both AMYERS and BCOLLINS. You might put the two windows side by side into your screen again.
 
@@ -541,12 +546,12 @@ Nevertheless – this RoD procedure is logged in the background, and visible as 
 
 If you do the same for BCOLLINS, there is no system response as there is no field with possible reveal functionality; unless for materials of non-sensitive material groups and you’ve allowed RoD as the default result.
 
-# <u>Part 3: Policy based data blocking scenario</u>
+# <u>5. Part 3: Policy based data blocking scenario</u>
 
-## Overview and business scenario
+## 5.A. Overview and business scenario
 In a final step, we will determine that the BOM header material CS-A1-X100 is even more sensitive; and must be available only to users with highest level clearance, in this case Aubrey Myers – all other users shall be blocked from accessing the CS-A1-X100 material data.
 
-## Configuration steps
+## 5.B. Configuration steps
 Create a new Logical Attribute called “LA_GUI_MATNR”.
 
 In Technical Mapping, in the section SAP GUI (Module Pool), maintain two entries manually (mass configuration for this data element is not suggested in this training – it will run for 20-30mins and result in tens of thousands of table and screen field definitions! If you have already triggered, you may want to open another browser tab to continue working in the config apps.)
@@ -586,7 +591,7 @@ Check and generate the policy.
 
 Return to the “Manage Sensitive Attributes” list view, hit “generate program” and check for successful status after 1-2 minutes.
 
-## Test of protected business scenario
+## 5.C. Test of protected business scenario
 Switch to the SAP GUI installations of AMYERS or BCOLLINS. You might put the two windows side by side into your screen again.
 
 In MM02, enter the BOM header material code CS-A1-X100 – you will stay in the selection screen and get the warning message that the material seems to be blocked.
