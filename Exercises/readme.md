@@ -6,12 +6,15 @@
 **SAP TechEd Version 2023-11**
 
 
+
 **<u>Table of Contents</u>**
 
 **1. Table of Contents [2](#_Toc148094853)**
 
 
+
 **2. Introduction and Overview [3](#introduction-and-overview)**
+
 
 
 **A. Overview and business scenario [3](#overview-and-business-scenario)**
@@ -21,11 +24,13 @@
 **C. Quick live product demo [4](#quick-live-product-demo)**
 
 
+
 **3. Training: Time to get busy! [7](#training-time-to-get-busy)**
 
 **A. Overview UIDP Masking Configuration [7](#overview-uidp-masking-configuration)**
 
 **B. Logon to demo/hands-on systems [7](#logon-to-demohands-on-systems)**
+
 
 
 **4. Part 1: role based masking of fields [15](#part-1-role-based-masking-of-fields)**
@@ -41,6 +46,7 @@
 **E. Test: protected business scenario [23](#test-protected-business-scenario)**
 
 
+
 **5. Part 2: policy based masking of fields [24](#part-2-policy-based-masking-of-fields)**
 
 **A. Overview and business scenario [24](#overview-and-business-scenario-2)**
@@ -48,6 +54,7 @@
 **B. Configuration steps [24](#configuration-steps)**
 
 **C. Test: protected business scenario [33](#test-protected-business-scenario-1)**
+
 
 
 **6. Part 3: Policy based data blocking scenario [35](#part-3-policy-based-data-blocking-scenario)**
@@ -60,7 +67,13 @@
 
 
 
+
+
+
 **<u>Introduction and Overview</u>**
+
+
+
 
 
 
