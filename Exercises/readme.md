@@ -12,63 +12,58 @@
 
 **2. Introduction and Overview [3](#introduction-and-overview)**
 
-A. Overview and business scenario [3](#overview-and-business-scenario)
+**A. Overview and business scenario [3](#overview-and-business-scenario)**
 
-B. Introduction to UIDP Masking [3](#introduction-to-uidp-masking)
+**B. Introduction to UIDP Masking [3](#introduction-to-uidp-masking)**
 
-C. Quick live product demo [4](#quick-live-product-demo)
+**C. Quick live product demo [4](#quick-live-product-demo)**
 
 **3. Training: Time to get busy! [7](#training-time-to-get-busy)**
 
-A. Overview UIDP Masking Configuration [7](#overview-uidp-masking-configuration)
+**A. Overview UIDP Masking Configuration [7](#overview-uidp-masking-configuration)**
 
-B. Logon to demo/hands-on systems [7](#logon-to-demohands-on-systems)
+**B. Logon to demo/hands-on systems [7](#logon-to-demohands-on-systems)**
 
-**4. Optional warm-up: UI Data Protection Logging [11](#optional-warm-up-ui-data-protection-logging)**
 
-A. Introduction: what is UI Data Protection Logging? [12](#introduction-what-is-ui-data-protection-logging)
+**4. Part 1: role based masking of fields [15](#part-1-role-based-masking-of-fields)**
 
-B. Setup/Configuration steps (“minimal viable” scenario) [12](#setupconfiguration-steps-minimal-viable-scenario)
+**A. Overview and business scenario [15](#overview-and-business-scenario-1)**
 
-**5. Part 1: role based masking of fields [15](#part-1-role-based-masking-of-fields)**
+**B. Test: baseline/”vanilla” system behaviour [15](#test-baselinevanilla-system-behaviour)**
 
-A. Overview and business scenario [15](#overview-and-business-scenario-1)
+**C. Configuration steps – simple role based scenario [16](#configuration-steps-simple-role-based-scenario)**
 
-B. Test: baseline/”vanilla” system behaviour [15](#test-baselinevanilla-system-behaviour)
+**D. Configuration steps – role based with Reveal on Demand [22](#configuration-steps-role-based-with-reveal-on-demand)**
 
-C. Configuration steps – simple role based scenario [16](#configuration-steps-simple-role-based-scenario)
+**E. Test: protected business scenario [23](#test-protected-business-scenario)**
 
-D. Configuration steps – role based with Reveal on Demand [22](#configuration-steps-role-based-with-reveal-on-demand)
+**5. Part 2: policy based masking of fields [24](#part-2-policy-based-masking-of-fields)**
 
-E. Test: protected business scenario [23](#test-protected-business-scenario)
+**A. Overview and business scenario [24](#overview-and-business-scenario-2)**
 
-**6. Part 2: policy based masking of fields [24](#part-2-policy-based-masking-of-fields)**
+**B. Configuration steps [24](#configuration-steps)**
 
-A. Overview and business scenario [24](#overview-and-business-scenario-2)
+**C. Test: protected business scenario [33](#test-protected-business-scenario-1)**
 
-B. Configuration steps [24](#configuration-steps)
+**6. Part 3: Policy based data blocking scenario [35](#part-3-policy-based-data-blocking-scenario)**
 
-C. Test: protected business scenario [33](#test-protected-business-scenario-1)
+**A. Overview and business scenario [35](#overview-and-business-scenario-3)**
 
-7. Part 3: Policy based data blocking scenario [35](#part-3-policy-based-data-blocking-scenario)
+**B. Configuration steps [35](#configuration-steps-1)**
 
-A. Overview and business scenario [35](#overview-and-business-scenario-3)
+**C. Test of protected business scenario [36](#test-of-protected-business-scenario)**
 
-B. Configuration steps [35](#configuration-steps-1)
 
-C. Test of protected business scenario [36](#test-of-protected-business-scenario)
+**<u>Introduction and Overview</u>**
 
-**8. Bonus part: Multi level approach based on derived attributes in SAP GUI [39](#bonus-part-multi-level-approach-based-on-derived-attributes-in-sap-gui)**
-
-**9. Reprise: Bonus Part UI Data Protection Logging [39](#reprise-bonus-part-ui-data-protection-logging)**
-
-A. Test: protected business scenario [39](#test-protected-business-scenario-2)
-
-<u>Introduction and Overview</u>
 
 **Overview and business scenario**
 
+
+
 Welcome the UI Data Protection workshop at SAPInsider!
+
+
 
 UI Data Protection Masking is part of the UI Data Protection Suite, which is comprised of: 
 - UI Data Protection Masking 
@@ -94,6 +89,7 @@ We wish you an interesting session. We look forward to your feedback on the usef
 
 
 Introduction to UIDP Masking
+
 
 
 New legislation worldwide makes companies responsible for controlling who can access, view, and modify sensitive data internally; both for tracking access as well as further securing sensitive data. This requires a flexible, granular way to limit access to critical fields to authorized users. 
@@ -177,7 +173,8 @@ The below diagram showcases the main process flow.
 This flow intentionally excludes the Level 1 user (BCOLLINS) as this user’s role is not relevant for the process chain – given that his access is thoroughly restricted via UI Blocking. 
 
 <img src="media/image7.png" style="width:6.26806in;height:2.80486in" />
-<u>Training: Time to get busy!</u>
+
+**<u>Training: Time to get busy!</u>**
 
 </details>
 
@@ -209,7 +206,7 @@ To conduct the configurations and business scenarios, you will be using the foll
 
 | User| Password| Name| Type |
 |--------:|----------:|--------------:|------------------:|
-| BCOLLINS| Welcome1| Ben Collins| Level 1 Clearance|
+|BCOLLINS| Welcome1| Ben Collins| Level 1 Clearance|
 |SMORGAN | Welcome1| Scott Morgan| Level 2 Clearance|
 |AMYERS|Welcome1|Aubrey Myers|Level 3 Clearance|
 |BPINST|Welcome1|Peter Munroe|Administrator & Config user|
@@ -229,17 +226,15 @@ In the following screen, mark the information for data element, database table a
 Repeat for the other fields – or cross-check with the information maintained here:
 
 
-| Rank | Languages |
-|-----:|-----------|
-|     1| Javascript|
-|     2| Python    |
-|     3| SQL       |
-Field	Data Element	Table Name	Field Name	Program Name	Screen Number	Screen Field
-Descr |	MAKTX	MAKT	MAKTX	SAPLMGD1	1002	MAKT-MAKTX
-Material [Number] |	MATNR	RMMG1	MATNR	SAPLMGD1	1002	RMMG1-MATNR
-Material Group | MATKL	MARA	MATKL	SAPLMGD1	2001	MARA-MATKL
-Gross Weight	BRGEW	MARA	BRGEW	SAPLMGD1	2007	MARA-BRGEW
-Net Weight	NTGEW	MARA	NTGEW	SAPLMGD1	2007	MARA-NTGEW
+
+Field|Data Element|Table Name|Field Name|Program Name|Screen Number|Screen Field
+|:|:|:|:|:|:|:|
+|Descr|MAKTX|MAKT|MAKTX|SAPLMGD1|1002|MAKT-MAKTX|
+|Material [Number] |MATNR|RMMG1|MATNR|SAPLMGD1|1002|RMMG1-MATNR|
+|Material Group|MATKL|MARA|MATKL|SAPLMGD1|2001|MARA-MATKL|
+|Gross Weight|BRGEW|MARA|BRGEW|SAPLMGD1|2007|MARA-BRGEW|
+|Net Weight|NTGEW|MARA|NTGEW||SAPLMGD1|2007|MARA-NTGEW|
+
 That’s it for preparations… let’s get started with the configuration!
 
 
@@ -553,46 +548,4 @@ Do the same in BOM transaction CS02 for plant 1710 and usage 2.
 Switch to table display (SE16 or SE16n) and try to find material CS-A1-X100 in the search help and tables MARA; MAKT, and MAST. You should not be able to find these in case the configuration setup is correct; instead note the footer message that some entries are excluded:
 
 <img src="media/image116.png" style="width:5.58881in;height:4.40553in" />
-Bonus part: Multi level approach based on derived attributes in SAP GUI
-If these exercises went really well for you, and you’re even done with the below testing of the UIDP Logging, you may call it a day.
-
-If you’ve not had enough yet, and are interested in trying something on your own, why don’t you re-purpose the blocking of materials from exercise part 3 – and build it to work similarly to the UI5 demo with the level based mechanism! The attributes to identify whether the supplier of a material is critical as well as the value ranges already exist.
-
-Just note that the critical supplier determination here is a “derived” attribute which also already exists – basically a (coded) lookup procedure, not a static value as the supplier is not available in the screen.
-
-Don’t be ashamed to peep into the existing configurations of the UI5-relevant policies (and in a consistent setup in a productive system, it might be a choice to not build just one policy to cover both GUI and UI5 scenarios).
-
-You can also take these home… the Fiori launchpad and a SAP GUI installation are all you need. Let your trainers know which of the appliances to activate when in the next couple days so you can finalize the training.
-
-Reprise: Bonus Part UI Data Protection Logging
-Test: protected business scenario
-There would be quite a number of logs available to check already now; but for this scenario let’s create one more. As Aubrey Myers, go to MM02, call any of the non-protected materials, change one of the weight entries and save. Will you be able to identify this action later?
-
-To have a look at the logs now, log on to SAP GUI as Admin Peter Munroe (BPINST) and call the transaction /LOGS4H/SHOW/TSF/RST (also maintained in favorites). This is actually a report reading out the data which are temporarily stored in the productive client, from where a job will move them to the more permanent repository where data aggregation and analysis is possible in an much more advanced and detailed manner:
-
-<img src="media/image117.png" style="width:3.91732in;height:2.04724in" />
-Maintain your selection parameters – or leave the default settings to show all of today’s data in your system and click on execute.
-
-In the result screen, you see a list of all logged roundtrips on the left hand, and details per roundtrip in the right area.
-
-<img src="media/image119.png" style="width:5.55149in;height:3.17368in" />
-In the header, click on “Switch detail display” to get a more readable rendering of the information.
-
-You can now go through the entries one after the other and will see the sequence and actions as well as accessed data reflected for all of the previous data accesses you have conducted with the various business users in SAP GUI.
-
-As an attempt for reading these data:
-
-<img src="media/image120.png" style="width:5.89282in;height:6.61963in" />
-The tag ID section is empty – we had not configured any tags, which would be a way of making search-relevant context more prominent, or to even add context not available in the field proper (e.g. the supplier in a material master change scenario).
-
-The header section contains metadata helping to identify the user (user ID, IP, host/computer name…) and how he accessed the data (system, UI technology, transaction/application name). There’s also metadata for data protection requirements, such as reason code and retention date (after which the record can be removed)
-
-The “Input” section contains selection parameters and action IDs, if appropriate. Here, the access (selection criteria) was to material CS-A1-X100-01. There’s not always a specific input/selection value; in particular if there was a navigation within one app, this section is often empty and the output is basically the continuation of the previous roundtrip.
-
-The “Output” sections contains a list of all fields included in the system response. Also here, you will not always have data: there are cases e.g. of a screen break after the input – but then the following roundtrip/record will be carrying these.
-
-This is certainly a lot to take in – please consider that these are raw data however, and in many cases analysing users will not need these; plus, there are options to decrease the data volumes while keeping the entirety of all actions (roundtrips) intact.
-
-Finally, scroll to the end of the list of roundtrips with the latest time stamps. Go through the last few entries, and try to identify the instance where you have changed the material weight. Will you see it? Hint: keep looking at the input section for an entry for weight… that’s the clue to look for! There are also reports in the solution to highlight such changes, but they are based in the repository.
-Thank you for spending your time with us today – and looking forward to
-being in touch!
+Thank you for spending your time with us today – and looking forward to being in touch!
