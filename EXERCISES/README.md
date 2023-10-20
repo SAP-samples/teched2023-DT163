@@ -4,8 +4,12 @@
 # Exercise: Working with SAP UI Data Protection
 
 ## SAP TechEd Version 2023-11
+<br/>
+
 
 <img src="media/image1.png" style="width:6.26806in;height:3.52569in" />
+<br/>
+
 
 # 1. Table of Contents
 
@@ -13,10 +17,12 @@
   ### A. Overview and business scenario [3](#overview-and-business-scenario)
   ### B. Introduction to UIDP Masking [3](#introduction-to-uidp-masking)
   ### C. Quick live product demo [4](#quick-live-product-demo)
+<br/>
 
 ## 2. Training: Time to get busy! [7](#training-time-to-get-busy)
   ### A. Overview UIDP Masking Configuration [7](#overview-uidp-masking-configuration)
   ### B. Logon to demo/hands-on systems [7](#logon-to-demohands-on-systems)
+<br/>
 
 ## 3. Part 1: role based masking of fields [15](#part-1-role-based-masking-of-fields)
   ### A. Overview and business scenario [15](#overview-and-business-scenario-1)
@@ -24,6 +30,7 @@
   ### C. Configuration steps – simple role based scenario [16](#configuration-steps-simple-role-based-scenario)
   ### D. Configuration steps – role based with Reveal on Demand [22](#configuration-steps-role-based-with-reveal-on-demand)
   ### E. Test: protected business scenario [23](#test-protected-business-scenario)
+<br/>
 
 ## 4. Part 2: policy based masking of fields [24](#part-2-policy-based-masking-of-fields)
   ### A. Overview and business scenario [24](#overview-and-business-scenario-2)
