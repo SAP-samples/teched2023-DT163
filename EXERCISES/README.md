@@ -200,21 +200,17 @@ This flow intentionally excludes the Level 1 user (BCOLLINS) as this user’s ro
 # **<u>Training: Time to get busy!</u>**
 
 
-## Overview UIDP Masking Configuration
-
-<img src="media/image8.png" style="width:6.26806in;height:2.27083in" />
-
-Logon to demo/hands-on systems
+## Logon to demo/hands-on systems
 The training scenarios are based in separate systems per user. Please identify IP address linked to your device/seat/ID. Best note it down separately for use in the next few steps.
 
-### Access to Fiori Launchpad
+## Access to Fiori Launchpad
 The demo part and configurations are web browser based and accessible through the following link. Replace the expression [DOMAIN] (everything between “https://” and “:44301…”) manually with your terminal’s application server IP address from above).
 
 Your browser may complain that this is not a secure connection. Please override the warnings to access the system even in unsafe mode.
 
 Bookmark the link, or create a hyperlink e.g. on the desktop, for further use during this training.
 
-### Access to SAP GUI
+## Access to SAP GUI
 The actual business scenario you will be building is based in the SAP GUI interface, which you can access through the training computer’s installation of SAP Logon. Please start SAP Logon (a local installation accessible in Windows start menu, or the icon on the desktop:
 
 <img src="media/image10.png" style="width:0.31102in;height:0.15748in" />
@@ -238,6 +234,7 @@ To conduct the configurations and business scenarios, you will be using the foll
 
 <img src="media/image15.png" style="width:5.41389in;height:3.38472in" />
 
+## Relevant data records
 Training data for the DeltaSpeed Alpha Bill of Materials structure and all relevant material numbers (Bill of materials/BOM with header material and components:
 
 In order to later on configure UIDP Masking, we will require technical address information for various fields – either because they are sensitive (to be protected), drive the authorization determination, or both. Let’s get them right now: In SAP Logon, open the system, log on as Administrator Peter Munroe (BPINST), go to transaction MM02, and access any of the above materials. We will require the technical information for the fields marked below.
