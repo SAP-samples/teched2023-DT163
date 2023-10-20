@@ -6,8 +6,7 @@
 **SAP TechEd Version 2023-11**
 
 
-<details>
-<summary>**<u>Table of Contents</u>**</summary>
+**<u>Table of Contents</u>**
 
 **1. Table of Contents [2](#_Toc148094853)**
 
@@ -65,9 +64,7 @@ C. Test of protected business scenario [36](#test-of-protected-business-scenario
 
 A. Test: protected business scenario [39](#test-protected-business-scenario-2)
 
-</details>
-<details>
-<summary><u>Introduction and Overview</u></summary>
+<u>Introduction and Overview</u>
 
 **Overview and business scenario**
 
@@ -93,11 +90,10 @@ This demo scenario guide is focused on the UI Masking solution. If you are inter
 
 We wish you an interesting session. We look forward to your feedback on the usefulness of the training both from context as well as usability perspective!
 
-</details>
 
 
-<details>
-<summary>Introduction to UIDP Masking</summary>
+
+Introduction to UIDP Masking
 
 
 New legislation worldwide makes companies responsible for controlling who can access, view, and modify sensitive data internally; both for tracking access as well as further securing sensitive data. This requires a flexible, granular way to limit access to critical fields to authorized users. 
@@ -184,6 +180,7 @@ This flow intentionally excludes the Level 1 user (BCOLLINS) as this user’s ro
 <u>Training: Time to get busy!</u>
 
 </details>
+
 <details>
 <summary>Overview UIDP Masking Configuration</summary>
 
@@ -245,47 +242,6 @@ Gross Weight	BRGEW	MARA	BRGEW	SAPLMGD1	2007	MARA-BRGEW
 Net Weight	NTGEW	MARA	NTGEW	SAPLMGD1	2007	MARA-NTGEW
 That’s it for preparations… let’s get started with the configuration!
 
-Optional warm-up: UI Data Protection Logging
-This is not a key part of the workshop, but the UIDP Logging functionality perfectly complements the features provided by UIDP Masking –these are two sides of the same coin really. Plus, it’s really quick to set up UIDP Logging in a minimal viable fashion.
-
-If you’re interested in the Logging feature of UI Data Protection, you may take a few minutes to start with this “bonus” scenario – if not, feel free to skip this step!
-
-Introduction: what is UI Data Protection Logging?
-In SAP S/4HANA, users are dealing with important business data, and it is critical from a security and also from a compliance standpoint that data be secured. Besides Masking, another way to secure data is to track or log it, especially if data need to be handed out in clear because a user must know. And UI data protection logging in SAP S/4HANA offers just that ability.
-
-UI data protection logging for SAP S/4HANA logs data at the user interface. In other words, it logs all data that is presented to the user as well as entered by the user.
-
-The data is logged at the server level and, after conversion to a standard format, logged data is stored in a temporary storage. For analysis and processing, the logged data is transferred from temporary storage to a log repository. The amount of data logged in temporary storage and in a log repository can be managed by configurating different logging depths, or using filtering.
-
-Setup/Configuration steps (“minimal viable” scenario)
-This is to set up a minimal viable scenario – UIDP Logging is a much more powerful solution and offers many more config options. But to get started it really only needs a few minutes:
-
-Logon to the SAP GUI as Peter Munroe (user BPINST). In the “Favorites” section, you find some of the relevant UIDP Logging configuration and usage options:
-
-<img src="media/image30.png" style="width:4.17717in;height:1.61024in" />
-First, check the configuration in the User Manager, determining which users/roles shall be relevant for logging. Enter the first entry in the UIDP Logging favorites, or alternatively go to transaction /LOGS4H/USER_MANAGER.
-The option is also found in SAP Menu through the node “Common settings” User Management “Maintain User Manager”.
-In the ensuing screen, you will find in tab “Roles” that there is already a role maintained and within validity period: “ZUIDP_BUSINESSACCESS”. This role belongs to all functional users – meaning that the users are relevant for Logging and will be logged in all transactions, applications and screens which are activated for UIDP Logging.
-
-<img src="media/image31.png" style="width:5.59306in;height:3.38335in" />
-Next, you set up the baseline settings for Logging. Navigate to S/4H configuration section, transaction SPRO, and double-click the entry for UI Logging IMG View.
-
-<img src="media/image32.png" style="width:2.49213in;height:0.99213in" />
-Drill into “ABAP Platform” “UI Data Protection Logging for SAP S/4HANA” “SAP GUI for Windows”. Here, click on the small “clock” character in front of the entry “Define General Parameters”:
-
-<img src="media/image33.png" style="width:2.98425in;height:1.49606in" />
-In the settings “Define General Parameters”, the baseline settings are already defined and active. For the purpose of this high level scenario, it is suggested to leave them unchanged.
-
-<img src="media/image34.png" style="width:4.95045in;height:2.79827in" />
-Finally, you would define which applications shall be subject to logging.
-Go to node “UI data protection Logging for SAP S/4HANA” SAP GUI for Windows Activate logging on transaction level.
-If not already existing, create new entries for the transactions MM02, MM03, CS02, CS03, SE16, and SE16n, and for each entry set the flag for “log active”. Leave the remaining settings on default mode (meaning they are controlled by the above general parameters). Save.
-
-<img src="media/image35.png" style="width:4.93983in;height:1.82302in" />
-That’s it – you have a minimal viable UIDP Logging installation up and running! Every call into the server conducted by any of the three business users in the activated transactions will now result in a bespoke roundtrip log, and we will have a look at them towards the end of the training.
-There are far more settings and options available, such as alerts, tagging, enrichment of log data etc., that do not however fit into this workshop.
-
-Now, let’s move on to masking!
 
 <u>Part 1: role based masking of fields</u>
 Overview and business scenario
