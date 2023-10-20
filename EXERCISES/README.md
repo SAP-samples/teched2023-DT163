@@ -173,12 +173,6 @@ This flow intentionally excludes the Level 1 user (BCOLLINS) as this user’s ro
 The training scenarios are based in separate systems per user. Please identify IP address linked to your device/seat/ID. Best note it down separately for use in the next few steps.
 <br/>
 
-| ID| SAP S/4H server|Fiori Launchpad Link| 
-|--------:|----------:|--------------:|------------------:|
-|BCOLLINS| Welcome1| Ben Collins| Level 1 Clearance|
-|SMORGAN | Welcome1| Scott Morgan| Level 2 Clearance|
-|AMYERS|Welcome1|Aubrey Myers|Level 3 Clearance|
-|BPINST|Welcome1|Peter Munroe|Administrator & Config user|
 
 |ID|SAP S/4H server address|Fiori Launchpad link|
 |------:|---------------------:|--------------------------------------------------------:|
