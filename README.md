@@ -1,6 +1,6 @@
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/teched2023-DT163)](https://api.reuse.software/info/github.com/SAP-samples/teched2023-DT163)
 
-# Session ID - Session Title
+# DT163 - Achieve Dynamic Data Access with ABAC Policies.
 
 ## Description
 
@@ -8,7 +8,7 @@ This repository contains the material for the SAP TechEd 2023 session called Ses
 
 ## Overview
 
-This session provides a complete Demo lesson with insights into SAP UI Data Protection, and how it helps to protect your SAP landscape. The PDF document in this folder provides the presentation which will be given in the session.
+This session provides a complete Demo lesson with insights into SAP UI Data Protection, and how it helps to protect your SAP landscape.
 
 ## Requirements
 
@@ -19,7 +19,7 @@ The training is based on the following software versions:
 
 ## Exercises
 
-Th exercises are included in README.md in folder "Exercises". 
+The exercises are documented in README.md in folder "Exercises". 
 
 
 ## Code of Conduct
