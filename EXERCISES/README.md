@@ -44,17 +44,15 @@
 
 # **<u>Introduction and Overview</u>**
 ## **Overview and business scenario**
-
+<br/>
 
 
 Welcome the UI Data Protection workshop at SAPInsider!
 
 
-
 UI Data Protection Masking is part of the UI Data Protection Suite, which is comprised of: 
 - UI Data Protection Masking 
 - UI Protection Logging 
-
 
 
 In the next 2 hours, you will gain an understanding of the workings of the SAP UI data protection solutions and quickly go through the steps for configuring 3 types of masking scenarios based on real life use cases in the materials management area:
@@ -70,6 +68,8 @@ Configurations will be mainly done in the Fiori/UI5 based configuration app, whi
 This demo scenario guide is focused on the UI Masking solution. If you are interested, there is a “bonus” minimal viable logging scenario included in this script; you will be prompted to activate at the beginning of the actual training.
 
 We wish you an interesting session. We look forward to your feedback on the usefulness of the training both from context as well as usability perspective!
+<br/>
+
 
 
 
@@ -96,6 +96,8 @@ Enforcing controls for checking authorizations and revealing data “on demand�
 
 Quick live product demo
 For introduction, the following demo is closely based on a real life scenario (all data and names are fictitious).
+<br/>
+
 
 ### Demo backstory
 Fictitious company DeltaBike are in the bicycle manufacturing business and currently working on an innovative E-Bike prototype under a secret project, internally called “DeltaSpeed”. 
@@ -109,14 +111,11 @@ This innovative product is a trade secret – which means only a select number o
 
 <img src="media/image4.png" style="width:3.06329in;height:1.47544in" />
  
-
- 
-
 In this scenario, confidentiality of data pertaining to Project DeltaSpeed is defined on whether materials originate from the special supplier, CarbonSpeed Labs. 
 
- 
-
 <img src="media/image5.png" style="width:6.26806in;height:2.14653in" />
+<br/>
+
  
 ### Demo Scenario Overview
 
