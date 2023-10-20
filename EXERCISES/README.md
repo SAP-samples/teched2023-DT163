@@ -11,7 +11,7 @@
 <br/>
 
 
-# 1. Table of Contents
+# Table of Contents
 
 ## 1. Introduction and Overview [3](#introduction-and-overview)
   ### A. Overview and business scenario [3](#overview-and-business-scenario)
@@ -49,8 +49,8 @@
 
 
 
-# **<u>Introduction and Overview</u>**
-## **Overview and business scenario**
+# **<u>1. Introduction and Overview</u>**
+## **1.A. Overview and business scenario**
 <br/>
 
 
@@ -81,7 +81,7 @@ We wish you an interesting session. We look forward to your feedback on the usef
 
 
 
-## Introduction to UIDP Masking
+## 1.B. Introduction to UIDP Masking
 
 
 
@@ -101,12 +101,12 @@ Applying dynamic and context aware authorizations, based on meta data (attribute
 
 Enforcing controls for checking authorizations and revealing data “on demand”: sensitive fields are initially masked, independent of a user’s authorization. Authorization check can be requested by the user, potentially requiring additional approval and resulting in un-masking if appropriate. The actions and results are recorded for review and audit purposes. 
 
-Quick live product demo
+### 1.C. Quick live product demo
 For introduction, the following demo is closely based on a real life scenario (all data and names are fictitious).
 <br/>
 
 
-### Demo backstory
+**1.C. Demo backstory**
 Fictitious company DeltaBike are in the bicycle manufacturing business and currently working on an innovative E-Bike prototype under a secret project, internally called “DeltaSpeed”. 
 
 The prototype team needs to source materials and parts from a special supplier, named CarbonSpeed Labs. 
@@ -124,24 +124,20 @@ In this scenario, confidentiality of data pertaining to Project DeltaSpeed is de
 <br/>
 
  
-### Demo Scenario Overview
+**Demo Scenario Overview**
 
 This demo showcases a specific scenario involving the Procurement, Goods Receipt, Product Master and Bill of Materials process chains, including 3 users with distinct Levels of Access: 
 
+ <img src="media/image6.png" style="width:6.26806in;height:2.71181in" />
  
+<br/>
 
-<img src="media/image6.png" style="width:6.26806in;height:2.71181in" />
- 
-
- 
-
- 
 
 **Ben Collins (BCOLLINS)**
 
 As an employee outside the DeltaSpeed Project team, Ben should not have access to display any information classified as Confidential. 
 
-The UI Blocking feature is used to suppress data rows and block entire screens from being displayed. 
+The UI Blocking feature is used to suppress data rows and block entire screens from being displayed. <br/>
 
 **Scott Morgan (SMORGAN)**
 
@@ -153,11 +149,16 @@ In the Material Documents scenario, Scott is situationally allowed to reveal suc
 
 Because Scott has no business use for any R&D data, access to Product Master Data and BOMs are blocked via Data Blocking feature. 
 
+<br/>
+
 **Aubrey Myers (AMYERS)**
 
 Aubrey is the project lead and designs the product prototypes. To this end, she is allowed to display all Confidential information without restrictions. 
 
 In addition, Aubrey is also responsible for approving “Reveal on Demand” requests occasionally raised by Scott and his team. 
+<br/>
+
+
 
 ### Process Flow
 The below diagram showcases the main process flow. 
