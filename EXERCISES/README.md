@@ -31,13 +31,13 @@
   ### E. Test: protected business scenario [23](#test-protected-business-scenario)
 <br/>
 
-## 4. Part 2: policy based masking of fields [24](#part-2-policy-based-masking-of-fields)
+## 4. Part 2: policy based (ABAC) masking of fields [24](#part-2-policy-based(ABAC)-masking-of-fields)
   ### A. Overview and business scenario [24](#overview-and-business-scenario-2)
   ### B. Configuration steps [24](#configuration-steps)
   ### C. Test: protected business scenario [33](#test-protected-business-scenario-1)
 <br/>
 
-## 5. Part 3: Policy based data blocking scenario [35](#part-3-policy-based-data-blocking-scenario)
+## 5. Part 3: Policy based (ABAC) data blocking scenario [35](#part-3-policy-based(ABAC)-data-blocking-scenario)
   ### A. Overview and business scenario [35](#overview-and-business-scenario-3)
   ### B. Configuration steps [35](#configuration-steps-1)
   ### C. Test of protected business scenario [36](#test-of-protected-business-scenario)
@@ -409,7 +409,7 @@ After screen re-load, a confirmation is displayed in the footer bar, and both we
 
 Log on a SAP GUI session for user BCOLLINS and repeat the above steps. You should see both the gross and net weight in protection fashion. Upon triggering “reveal on”, the process aborts as there is nothing to reveal for this user (in the latest versions a different behavior is implemented: the “reveal on” function is only displayed if there are revealable field in the screen.)
 
-# <u>4. Part 2: policy based masking of fields</u>
+# <u>4. Part 2: policy based (ABAC) masking of fields</u>
 <br/>
 
 ## 4.A. Overview and business scenario
@@ -574,7 +574,7 @@ Nevertheless – this RoD procedure is logged in the background, and visible as 
 
 If you do the same for BCOLLINS, there is no system response as there is no field with possible reveal functionality; unless for materials of non-sensitive material groups and you’ve allowed RoD as the default result.
 
-# <u>5. Part 3: Policy based data blocking scenario</u>
+# <u>5. Part 3: Policy based (ABAC) data blocking scenario</u>
 
 ## 5.A. Overview and business scenario
 In a final step, we will determine that the BOM header material CS-A1-X100 is even more sensitive; and must be available only to users with highest level clearance, in this case Aubrey Myers – all other users shall be blocked from accessing the CS-A1-X100 material data.
